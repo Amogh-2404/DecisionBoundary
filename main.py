@@ -53,7 +53,9 @@ def generate_data_and_plot_knn(k_values=[1, 3, 5]):
         plt.xlabel('Feature 1')
         plt.ylabel('Feature 2')
         plt.legend()
+        plt.savefig(f'Plots/K-Nearest Neighbours with k={k}.png')
         plt.show()
+
 
 
 
@@ -121,7 +123,9 @@ def generate_data_and_plot_lwp():
     plt.xlabel('Feature 1')
     plt.ylabel('Feature 2')
     plt.legend()
+    plt.savefig('Plots/Learning with Prototype.png')
     plt.show()
+
 
 # generate_data_and_plot_lwp()
 
@@ -154,7 +158,9 @@ def generate_data_and_plot_lwp_chi():
     plt.xlabel('Feature 1')
     plt.ylabel('Feature 2')
     plt.legend()
+    plt.savefig('Plots/Learning with Prototype chi.png')
     plt.show()
+
 
 def generate_data_and_plot_knn_chi(k_values):
     k1 = 7
@@ -184,7 +190,12 @@ def generate_data_and_plot_knn_chi(k_values):
         plt.xlabel('Feature 1')
         plt.ylabel('Feature 2')
         plt.legend()
+        plt.savefig(f'Plots/K-Nearest Neighbours chi with k={k}.png')
         plt.show()
 
 
+
+generate_data_and_plot_knn(k_values = [1,3,5,10])
 generate_data_and_plot_knn_chi(k_values = [1,3,5,10])
+generate_data_and_plot_lwp()
+generate_data_and_plot_lwp_chi()
